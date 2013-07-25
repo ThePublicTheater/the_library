@@ -1,0 +1,11 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/TheLibMaster.master" AutoEventWireup="true" %>
+<asp:content ContentPlaceHolderId="MainContentPlaceHolder" runat="server">
+<div class="imgholder">
+    <umbraco:Macro srcSourceProperty="imageA" altSourceProperty="imageAAlt" Alias="imageFromMedia" runat="server" />
+    <umbraco:Macro srcSourceProperty="imageB" altSourceProperty="imageBAlt" Alias="imageFromMedia" runat="server" />
+</div>
+<div class="txtholder">
+	<umbraco:Item field="bodyText" runat="server" />
+</div>
+
+</asp:content>

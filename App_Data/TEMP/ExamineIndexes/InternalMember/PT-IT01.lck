@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-16"?>
+<dictionary>
+  <item>
+    <key>
+      <LCKFields>Name</LCKFields>
+    </key>
+    <value><![CDATA[PT-IT01]]></value>
+  </item>
+  <item>
+    <key>
+      <LCKFields>Created</LCKFields>
+    </key>
+    <value><![CDATA[2013-07-12 16:38:45.457]]></value>
+  </item>
+  <item>
+    <key>
+      <LCKFields>Updated</LCKFields>
+    </key>
+    <value><![CDATA[2013-07-12 16:38:45.457]]></value>
+  </item>
+</dictionary>

@@ -1,0 +1,42 @@
+﻿.slideshowContainer
+{
+   width:986px;
+   height:510px;
+   background-image:url('../images/Background/slideShowBG.png');
+   background-repeat:no-repeat;
+   margin-left:-8px;
+   position:relative;
+}
+
+.slideshowInsideContainer
+{
+    margin-top:-2px;
+    width:960px;
+    height:495px;
+    position:absolute;
+    margin-left:11px;
+    overflow:hidden;
+}
+
+.slideShowText
+{
+    position:absolute;
+    bottom:0;
+    z-index:10;
+    background-image:url('../images/Background/ssTextBG.png');
+    background-repeat:repeat;
+    width:100%;
+    padding:0px;
+    color:#fff;
+}
+
+.slideShowText h2
+{
+    margin:5px 0;
+    padding:0px;
+}
+
+.slideshowItems
+{
+    display:none;
+}

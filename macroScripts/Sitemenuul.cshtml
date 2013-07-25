@@ -1,0 +1,22 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+@{
+	var homeNode = Model.AncestorOrSelf(1);
+}
+<ul>
+  @RenderLiForNode(homeNode)
+  @foreach (var descendant in homeNode.Descendants(2)){
+	  @RenderLiForNode(descendant)
+  }
+</ul>
+@helper RenderLiForNode(umbraco.MacroEngines.DynamicNode node){
+	if (node.GetPropertyValue("umbracoNaviHide") == "0"){
+		<li@Html.Raw(node.Id == Model.Id ? " class=\"CurrentNode\"" : String.Empty)>
+			@if (String.IsNullOrWhiteSpace(node.GetPropertyValue("pageNavTitle"))){
+				<a href="@node.NiceUrl">@node.Name</a>
+			}
+			else{
+				<a href="@node.NiceUrl">@node.GetPropertyValue("pageNavTitle")</a>
+			}
+		</li>
+	}
+}

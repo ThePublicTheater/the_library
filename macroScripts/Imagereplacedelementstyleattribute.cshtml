@@ -1,0 +1,5 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+@{
+	var image = @Model.Media(Parameter.imageSourceProperty);
+}
+@Html.Raw("style=\"background-image: url('" + image.UmbracoFile + "'); height: " + image.UmbracoHeight + "px; width: " + image.UmbracoWidth + "px; text-indent: -9999px; overflow: hidden\"")

@@ -1,0 +1,12 @@
+@inherits umbraco.MacroEngines.DynamicNodeContext
+@using System.Text
+@{
+	StringBuilder output
+			= new StringBuilder(Model.Name.Replace(" ",String.Empty));
+	var node = Model;
+	while(node != null){
+		output.Insert(0, node.NodeTypeAlias + "_");
+		node = node.Parent;
+	}
+}
+@output.ToString()

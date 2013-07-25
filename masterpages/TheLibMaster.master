@@ -1,0 +1,140 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/HTML5Master.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="TitlePlaceHolder" runat="server">
+  <umbraco:Item field="pageTitle" insertTextAfter=" - " runat="server" />
+  <umbraco:Item field="siteTitle" recursive="true" runat="server" />
+</asp:content>
+  
+<asp:content ContentPlaceHolderId="HeadAppendPlaceHolder" runat="server"> 
+  <asp:ContentPlaceHolder ID="StyleOverridePlaceHolder" runat="server">
+    <script type="text/javascript" src="/scripts/slideshow.js"></script>
+    <link href="http://www.opentable.com/ism/feed_horizontal.css" rel="styleSheet" type="text/css" />
+    <link rel="stylesheet" href="/css/thelibrary.css" type="text/css" />
+   
+  </asp:ContentPlaceHolder>
+  <asp:ContentPlaceHolder ID="HeadAppendPlaceHolder" runat="server" />     
+  
+</asp:content>
+
+<asp:content ContentPlaceHolderId="BodyPlaceHolder" runat="server">
+ <div id="fb-root"></div>
+<script type='text/javascript'>
+
+  function embedPDF(){
+
+    var myPDF = new PDFObject({ 
+
+      url: 'http://www.thelibraryatthepublic.com/media/2225/webcopy_1_30_13.pdf'
+
+    }).embed('datacont'); 
+    // Be sure your document contains an element with the ID 'datacont' 
+
+  }
+
+  window.onload = embedPDF; //Feel free to replace window.onload if needed.
+
+</script>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+  <section>
+        <h3>Related organizations</h3>
+        <ul>
+          <li>
+            <a href="http://www.publictheater.org">The Public Theater</a>
+          </li>
+          <li>
+            <a href="http://www.joespub.com">Joe's Pub</a>
+          </li>
+        </ul>
+      </section>
+  <nav id="AccessibilityMenu">
+    <h3>Accessibility menu</h3>
+    <ul>
+      <li>
+        <a href="#MainContent" accesskey="c">Main content (c)</a>
+      </li>
+      <li>
+        <a href="#SiteMenu" accesskey="m">Site menu (m)</a>
+      </li>
+      <li>
+        <a href="#GeneralInfo" accesskey="i">General information (i)</a>
+      </li>
+      <li>
+        <a href="#AccessibilityMenu" accesskey="a">Return to this menu (a)</a>
+      </li>
+    </ul>
+  </nav>
+ 
+   <!-- facebook widget in header -->
+    <div class="fb-like" data-href="http://www.facebook.com/publictheater" data-send="true" data-layout="button_count" data-width="300" data-show-faces="false" data-font="lucida grande" style="position: absolute; top: 233px;" ></div>   
+    <!-- // end fb -->
+  
+  
+  <div>
+    <h1>
+      <a href="/"><umbraco:Item field="siteHeading" recursive="true" runat="server" /></a>
+    </h1>
+    
+    
+        <!-- opentable widget in header -->
+   
+    <script type="text/JavaScript" src="http://www.opentable.com/ism/?rid=92092"></script><noscript id="OT_noscript">
+<a href="http://www.opentable.com/the-library-at-the-public-joes-pub-reservations-new-york?restref=92092&rtype=ism">Reserve Now on OpenTable.com</a>
+    </noscript>
+    <div id="OT_logoLink"><a href="http://www.opentable.com/the-library-at-the-public-joes-pub-reservations-new-york?restref=92092&rtype=ism">The Library at the Public - Joe's Pub</a> Reservations</div>
+      <div id="OT_logo">
+        <a href="http://www.opentable.com/home.aspx?restref=92092&rtype=ism" title="Powered By OpenTable">
+            <img src="http://www.opentable.com/img/buttons/Otlogo.gif" id="OT_imglogo" alt="Restaurant Management Software" />
+        </a>
+    </div>
+</div>
+    <!-- // end opentable -->
+  
+    
+    <nav id="SiteMenu">
+      <h3>Site menu</h3>
+      <umbraco:Macro Alias="siteMenuUl" runat="server" />
+    </nav>
+ 
+    
+
+  
+    
+    <article id="MainContent">
+      <umbraco:Macro Alias="pageHeading" runat="server" />
+      <asp:ContentPlaceHolder id="MainContentPlaceHolder" runat="server" />
+
+	
+    </article>
+    <footer>
+      <section id="LibraryIntro" <umbraco:Macro Alias="imageReplacedElementStyleAttribute" imageSourceProperty="footerIntro" runat="server"/>
+      </section>
+      <a href="https://twitter.com/LibraryLoungeNY"><section id="GeneralInfo" <umbraco:Macro Alias="imageReplacedElementStyleAttribute" imageSourceProperty="footerReplacementImage" runat="server"/>
+        <umbraco:Item field="footerHtml"  recursive="true" runat="server" />
+      </section></a>
+    </footer>
+	
+	
+  </div>
+  <asp:ContentPlaceHolder ID="ScriptAppendPlaceHolder" runat="server" />
+  <!--script type="text/javascript">
+   
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22943198-8']);
+    _gaq.push(['_trackPageview']);
+   
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+   
+  </script-->
+
+</asp:content>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <files>
+    <file>
+      <guid>NivoSlider.cshtml</guid>
+      <orgPath>/macroScripts</orgPath>
+      <orgName>NivoSlider.cshtml</orgName>
+    </file>
+    <file>
+      <guid>jquery-1.6.2.min.js</guid>
+      <orgPath>/scripts</orgPath>
+      <orgName>jquery-1.6.2.min.js</orgName>
+    </file>
+    <file>
+      <guid>jquery.nivo.slider.pack.js</guid>
+      <orgPath>/scripts</orgPath>
+      <orgName>jquery.nivo.slider.pack.js</orgName>
+    </file>
+  </files>
+  <info>
+    <package>
+      <name>NivoSlider for Umbraco</name>
+      <version>0.5</version>
+      <license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
+      <url>http://our.umbraco.org/projects/website-utilities/nivoslider-for-umbraco</url>
+      <requirements>
+        <major>3</major>
+        <minor>0</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Andrés Valor</name>
+      <website>http://our.umbraco.org/projects/website-utilities/nivoslider-for-umbraco</website>
+    </author>
+    <readme><![CDATA[This package enables you to have a Nivo Slider on an umbraco installation. The implementation is quite simple, since this is my first package and also the first time working with Razor. So feel free to suggest any improvement, make any comment, or ask any question as you like. Of course, if you detect a bug, don't hessitase to contact me
+
+Please refer to the documentation located at Umbraco project website for instructions about installing and usage.]]></readme>
+  </info>
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets>
+    <Stylesheet>
+      <Name>nivo-slider</Name>
+      <FileName>nivo-slider</FileName>
+      <Content><![CDATA[/*
+ * jQuery Nivo Slider v2.6
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010
+ */
+ 
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+]]></Content>
+    </Stylesheet>
+  </Stylesheets>
+  <Macros>
+    <macro>
+      <name>Nivo Slider</name>
+      <alias>nivoSlider</alias>
+      <scriptType>
+      </scriptType>
+      <scriptAssembly>
+      </scriptAssembly>
+      <xslt>
+      </xslt>
+      <useInEditor>False</useInEditor>
+      <refreshRate>0</refreshRate>
+      <scriptingFile>NivoSlider.cshtml</scriptingFile>
+      <properties>
+        <property name="Image Folder" alias="nivoFolder" show="True" propertyType="mediaCurrent" />
+        <property name="Anim. Speed (ms.)" alias="nivoAnimSpeed" show="True" propertyType="number" />
+        <property name="Pause Time (ms.)" alias="nivoPauseTime" show="True" propertyType="number" />
+        <property name="Start Slide" alias="nivoStartSlide" show="True" propertyType="number" />
+        <property name="Show Control Nav." alias="nivoControlNav" show="True" propertyType="bool" />
+        <property name="Show Direction Nav." alias="nivoDirectionNav" show="True" propertyType="bool" />
+        <property name="Keyboard Nav." alias="nivoKeyboardNav" show="True" propertyType="bool" />
+        <property name="Pause on Hover" alias="nivoPauseOnHover" show="True" propertyType="bool" />
+        <property name="Manual Advance" alias="nivoManualAdvance" show="True" propertyType="bool" />
+        <property name="Box Cols" alias="nivoBoxCols" show="True" propertyType="number" />
+        <property name="Box Rows" alias="nivoBoxRows" show="True" propertyType="number" />
+        <property name="Caption Opacity" alias="nivoCaptionOpacity" show="True" propertyType="text" />
+        <property name="Previous Text" alias="nivoPrevText" show="True" propertyType="text" />
+        <property name="Next Text" alias="nivoNextText" show="True" propertyType="text" />
+      </properties>
+    </macro>
+  </Macros>
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+</umbPackage>

@@ -1,0 +1,17 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+@{
+  string altText = null;
+  if (String.IsNullOrWhiteSpace(Parameter.altSourceProperty))
+  {
+    altText = @Parameter.altText;
+  }
+  else
+  {
+    altText = @Model.GetPropertyValue(Parameter.altSourceProperty);
+    if (String.IsNullOrWhiteSpace(altText))
+    {
+      altText = Model.Media(Parameter.altSourceProperty).Name;
+    }
+  }
+}
+<img src="@Model.Media(Parameter.srcSourceProperty).UmbracoFile"@Html.Raw(String.IsNullOrWhiteSpace(altText) ? String.Empty : " alt=\"" + altText + "\"") />

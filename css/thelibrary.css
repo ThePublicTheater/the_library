@@ -1,0 +1,423 @@
+/*******************************************************************************
+  RESET *1
+*******************************************************************************/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+section
+{
+  display: block;
+}
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after
+{
+  content: '';
+  content: none;
+}
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/*******************************************************************************
+  VISUALLY HIDDEN ELEMENTS *2
+*******************************************************************************/
+
+body > a, /* Accessibility link */
+nav h3
+{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*******************************************************************************
+  STANDARD ELEMENTS
+*******************************************************************************/
+
+#HomePage_TheLibrary
+{
+  border: 30px solid black;
+  width: 775px;
+  height: 810px;
+  padding: 2.5em 3em;
+  margin: 2em auto;
+}
+
+#HomePage_Menu_Menu
+{
+	border: 30px solid black;
+	width: 775px;
+	height: 1010px;
+	padding: 2.5em 3em;
+	margin: 2em auto;
+}
+
+#HomePage_TextWithImagesPage_About 
+{  
+  border: 30px solid black;
+  width: 775px;
+  height: 1010px;
+  padding: 2.5em 3em;
+  margin: 2em auto;
+}
+
+#HomePage_TextWithImagesPage_Events 
+{  
+  border: 30px solid black;
+  width: 775px;
+  height: 1010px;
+  padding: 2.5em 3em;
+  margin: 2em auto;
+}
+
+#HomePage_TextWithImagesPage_Menu
+{  
+  border: 30px solid black;
+  width: 775px;
+  height: 2611px;
+  padding: 2.5em 3em;
+  margin: 2em auto;
+}
+
+#AccessibilityMenu
+{
+  text-indent: -9999px;
+  position: absolute;
+}
+
+div h1 a
+{
+  display: block;
+  text-indent: -9999px;
+  height: 101px; 
+  width: 332px;
+  background: url('/media/1769/library_logotype_blk_332x101.png') no-repeat; 
+}
+
+#SiteMenu h3 + ul>:first-child 
+{
+  text-indent: -9999px;
+  position: absolute;
+}
+
+#SiteMenu h3 + ul>:first-child + li a
+{
+  display: block;
+  text-indent: -9999px;
+  height: 17px; 
+  width: 67px;
+  background: url('/media/Unmanaged/Images/LIBRARY_mini-site_ABOUT-red.png') no-repeat; 
+  position: absolute;
+  margin-left: 31em;
+  margin-top: 4.25em;
+}
+
+#SiteMenu h3 + ul li + li a
+{
+  display: block;
+  text-indent: -9999px;
+  height: 17px; 
+  width: 76px;
+  background: url('/media/Unmanaged/Images/LIBRARY_mini-site_EVENTS-red.png') no-repeat; 
+  position: absolute;
+  margin-left: 37.4em;
+  margin-top: 4.25em;
+}
+
+#SiteMenu h3 + ul>:last-child a
+{
+  margin-left: 44.5em;
+  display: block;
+  text-indent: -9999px;
+  height: 16px; 
+  width: 58px;
+  background: url('/media/Unmanaged/Images/LIBRARY_mini-site_MENU-red.png') no-repeat; 
+  position: absolute;
+}
+  
+
+
+#MainContent
+{
+  border-style:solid;
+  border-top: 25px solid black;
+  border-bottom: 25px solid black;
+  height: 610px;
+  margin-top: 6em;
+}
+
+p
+{
+  font-family: helvetica;
+  font-size: .8em;
+  margin-left: 21em;
+  line-height:130%;
+}
+
+p + p
+{
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+p a
+{
+  color: #EF4035;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+img + img
+{
+  margin-top: 1.7em;
+  position: absolute;
+  display: block;
+}
+
+img.photo {
+float:right;
+margin-right:35px;
+}
+
+h2
+{  
+  text-indent: -9999px;
+}
+
+#MainContent div
+{
+  width:770px;
+  margin-top: .5em;
+  position: absolute;
+}
+
+#GeneralInfo
+{
+  display: block;
+  text-indent: -9999px;
+  background: url('/media/2811/library_hours_327x157.png') no-repeat; 
+  position: absolute;
+  height: 160px; 
+  width: 313px;
+  margin-left: 29em;
+  margin-top: 1.5em;
+}
+
+address + pre
+{
+  text-indent: -9999px;
+}
+
+section h3
+{
+  text-indent: -9999px;
+  display: block;
+  position: absolute;
+  height: 22px; 
+  width: 202px;
+  margin-top: 0em;
+  margin-left: 27em;
+  background: url('/media/Unmanaged/Images/LIBRARY_mini-site_CHOOSE.png') no-repeat; 
+}
+
+section h3 + ul>:first-child  a
+{
+  margin-left: 27em;
+  margin-top: 2em;
+  position: absolute;
+  display: block;
+  text-indent: -9999px;
+  height: 41px; 
+  width: 140px;
+  background: url('/media/Unmanaged/Images/LIBRARY_mini-site_publiclogo.png') no-repeat; 
+  position: absolute;
+}
+
+section h3 + ul>:first-child + li a
+{
+  margin-left: 38.5em;
+  margin-top: 2em;
+  position: absolute;
+  display: block;
+  text-indent: -9999px;
+  height: 40px; 
+  width: 160px;
+  background: url('/media/Unmanaged/Images/LIBRARY_mini-site_joespub.png') no-repeat; 
+  position: absolute;
+}
+
+#GeneralInfo
+{
+  display: block;
+  text-indent: -9999px;
+  position: absolute;
+}
+
+#HomePage_TheLibrary div img
+{
+
+  position: absolute;
+  padding-top: 8px;
+}
+
+
+#LibraryIntro
+{
+  margin-top: 1.5em;
+  display: inline-block;
+  float:left;
+  width: 412px;
+}
+
+
+#HomePage_TextWithImagesPage_About .CurrentNode  a
+{
+  text-indent: -9999px;
+  display: block;
+  position: absolute;
+}
+
+#HomePage_TextWithImagesPage_About p + p
+{
+  margin-top: .7em;
+  margin-bottom: .7em;
+}
+
+
+#HomePage_TextWithImagesPage_Menu #MainContent
+{
+  height: 2211px;
+}
+
+#HomePage_TextWithImagesPage_Menu pre
+{
+  margin-left: 19.3em;
+  font-family: helvetica;
+  font-size: .75em;
+  line-height: 86%;
+  border-left: 25px solid black;
+  padding-left: 2em;
+  padding-top: 2.8em;
+}
+
+#HomePage_TextWithImagesPage_Menu p
+{
+  margin-left: 15em;
+  font-family: helvetica;
+  font-size: .85em;
+  line-height: 90%;
+  border-left: 25px solid black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: -.05em;
+}
+
+#HomePage_TextWithImagesPage_Menu img + img
+{
+display: none;
+}
+
+#HomePage_TextWithImagesPage_Menu #MainContent div
+{
+  text-indent: -9999px;
+  display: block;
+  position: absolute;
+  height: 159px; 
+  width: 206px;
+  background: url('/media/Unmanaged/Images/LIBRARY_mini-site_placeholder.png'); 
+}
+
+#HomePage_TextWithImagesPage_Menu p
+{
+  text-indent: 0px;
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  padding-left: 2.2em;
+}
+
+#GeneralInfo pre
+{
+  border-style: none;
+}
+
+.fb_like.fb_edge_widget_with_comment
+
+{ position: absolute; top: 262px;}
+
+
+
+
+
+
+
+#OT_logo, #OT_logoLink, .OT_feedTitle{display: none; }
+#OT_searchWrapper {background: url(/media/2556/ot_bkgd.png) no-repeat; margin: -35px 0 0 -6px;  position: relative; width: 340px; color: #000; font-weight: bold; height: 28px; top: 90px; border: none;}  
+#OT_defList div div {margin-top: 0px;}
+
+#OT_partySizeLbl, #OT_partySize,  #OT_dateLbl, #OT_date, #OT_timeLbl, #OT_time {top: 0px; }
+#OT_partySizeLbl { width: 70px; display:none; }
+#OT_partySize { left: 65px;}  
+#OT_dateLbl {width: 25px; left: 130px; display:none; }
+#OT_date { left: 142px;}
+#OT_timeLbl {left: 248px; display:none; } 
+#OT_time {left: 260px;}
+#OT_submitWrap {top: 3px;left: 346px;}
+
+#OT_searchWrapper #dateDisplay {display: none;}
+
+#OT_searchWrapper .feedFormField, #OT_searchWrapper .feedFormField option {
+    font-size: 11px; margin: 4px 0px 0px; 
+}
+
+
+#OT_searchWrapper #startDate, #OT_searchWrapper .OT_feedFormfieldCalendar {
+    font-family: Verdana,Arial,Helvetica,Sans-Serif;
+    font-size: 11px;
+    margin: 3px 0px 0px; 
+    width: 75px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/TheLibMaster.master" AutoEventWireup="true" %>
+
+<asp:content ContentPlaceHolderId="MainContentPlaceHolder" runat="server">
+   <div id="macro"><umbraco:Macro PropertyAlias="mediaSlideshow" Alias="MediaOutput" runat="server"></umbraco:Macro></div>
+
+  <div>
+    
+    <img src="/media/2078/slideshow_clams_wine_775x341.jpg" name="slide" border=0 width=775 height=341>
+  <script>
+  <!--
+
+
+    slideshowimages("/media/2561/slideshow_bars_drink_775x341.jpg","/media/2566/slideshow_bartender_775x341.jpg","/media/2571/slideshow_clams_wine_775x341.jpg","/media/2576/slideshow_drink_corner_775x341.jpg","/media/2581/slideshow_drink_mix_room_775x341.jpg","/media/2586/slideshow_lamps_mintdrink_775x341.jpg","/media/2591/slideshow_space_775x341.jpg","/media/2596/slideshow_statue_drink_775x341.jpg")
+  //configure the speed of the slideshow
+  var slideshowspeed=3000
+  var whichlink=0
+  var whichimage=0
+  function slideit(){
+  if (!document.images)
+  return
+  document.images.slide.src=slideimages[whichimage].src
+  whichlink=whichimage
+  if (whichimage<slideimages.length-1)
+  whichimage++
+  else
+  whichimage=0
+  setTimeout("slideit()",slideshowspeed)
+  }
+  slideit()
+
+  //-->
+  </script>
+  </div>
+<br />  
+
+</asp:content>

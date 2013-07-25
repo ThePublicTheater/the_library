@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+      <title>
+        <asp:ContentPlaceHolder ID="TitlePlaceHolder" runat="server" />
+      </title>
+    <asp:ContentPlaceHolder ID="HeadAppendPlaceHolder" runat="server" />
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </head>
+  <body id="<umbraco:Macro Alias="bodyId" runat="server" />">
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WMGW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WMGW');</script>
+
+
+ <script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 998421924;
+var google_conversion_label = "6eFsCKTrzwQQpOuK3AM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js&quot;&gt;
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/998421924/?value=0&label=6eFsCKTrzwQQpOuK3AM&guid=ON&script=0"/>
+</div>
+</noscript>
+<!-- End Google Tag Manager -->
+ <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server" />
+  </body>
+</html>
+</asp:Content>

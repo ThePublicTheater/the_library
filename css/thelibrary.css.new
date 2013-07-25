@@ -1,0 +1,6 @@
+body
+{
+	background-color: yellow;
+	color: red;
+border: 10px dashed pink;
+}

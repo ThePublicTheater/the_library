@@ -1,0 +1,5 @@
+﻿@inherits umbraco.MacroEngines.DynamicNodeContext
+@if (Model.GetProperty("pageHideHeading").Value == "0"
+     && !String.IsNullOrWhiteSpace(Model.GetProperty("pageHeading").Value)){
+  <h2>@Model.GetProperty("pageHeading").Value</h2>
+}

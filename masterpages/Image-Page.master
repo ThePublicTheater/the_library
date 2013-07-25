@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title><umbraco:Item field="pageName" runat="server" /> - The Library</title>
+</head>
+<body>
+
+</body>
+</html> 
+</asp:Content>
